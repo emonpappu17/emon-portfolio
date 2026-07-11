@@ -129,10 +129,11 @@ export const metadata: Metadata = {
 
   verification: {
     // Replace with your actual Google Search Console verification code
-    google: "YOUR_GOOGLE_VERIFICATION_CODE",
+    google: "uR6Ut8d_Mm341gWdVO0k0zhNop8XVmd55RzI5SRmiOE",
   },
 };
 
+//<meta name="google-site-verification" content="uR6Ut8d_Mm341gWdVO0k0zhNop8XVmd55RzI5SRmiOE" />
 export default function RootLayout({
   children,
 }: Readonly<{
