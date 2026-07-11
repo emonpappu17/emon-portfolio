@@ -1,6 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-"use client";
-
 import { AnimatedBorderButton } from "@/components/ui/AnimatedBorderButton";
 import { Button } from "@/components/ui/Button";
 import {
@@ -53,14 +50,15 @@ const skills: Skill[] = [
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden" aria-label="Introduction Hero Section">
       {/* Bg */}
       <div className="absolute inset-0">
         <Image
           src="/hero-bg.jpg"
-          alt="Hero background"
+          alt=""
           fill
           priority
+          sizes="100vw"
           className="object-cover opacity-40"
         />
         <div className="absolute inset-0 bg-linear-to-b from-background/20 via-background/80 to-background" />
@@ -93,7 +91,7 @@ export const Hero = () => {
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I'm Emon Howlader — a web developer specializing in
+                Hi, I&apos;m Emon Howlader — a web developer specializing in
                 React, Next.js, Node.js and TypeScript. I build scalable, performant web
                 applications that users love.
               </p>
@@ -103,20 +101,15 @@ export const Hero = () => {
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
               <Button
                 size="lg"
-                onClick={() => {
-                  document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
-                }}
+                href="#contact"
               >
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
 
               <AnimatedBorderButton
-                onClick={() =>
-                  window.open(
-                    "https://drive.google.com/file/d/1lIdiprQEE__8SkrnpsR5kVX2ILChIu7u/view?usp=sharing",
-                    "_blank"
-                  )
-                }
+                href="https://drive.google.com/file/d/1lIdiprQEE__8SkrnpsR5kVX2ILChIu7u/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Download className="w-5 h-5" />
                 Resume
@@ -135,6 +128,8 @@ export const Hero = () => {
                   key={idx}
                   href={social.href}
                   aria-label={social.label}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
                 >
                   {<social.icon className="w-5 h-5" />}
@@ -156,10 +151,11 @@ export const Hero = () => {
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <Image
                   src="/emon-photo.png"
-                  alt="Emon Howlader"
+                  alt="Emon Howlader - Full Stack Developer and MERN Specialist Portrait"
                   width={400}
                   height={500}
                   priority
+                  sizes="(max-width: 768px) 100vw, 400px"
                   className="w-full aspect-4/5 object-cover rounded-2xl"
                 />
 

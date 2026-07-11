@@ -141,7 +141,7 @@ export const Projects = () => {
     : projects.slice(0, VISIBLE_COUNT);
 
   return (
-    <section id="projects" className="py-32 relative overflow-hidden">
+    <section id="projects" className="py-32 relative overflow-hidden" aria-label="Web Development Projects Showcase">
       {/* Bg glows */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-highlight/5 rounded-full blur-3xl pointer-events-none" />
@@ -168,7 +168,7 @@ export const Projects = () => {
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-8">
           {visibleProjects.map((project, idx) => (
-            <div
+            <article
               key={idx}
               className="group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1"
               style={{ animationDelay: `${(idx + 1) * 100}ms` }}
@@ -177,9 +177,10 @@ export const Projects = () => {
               <div className="relative overflow-hidden aspect-video">
                 <Image
                   src={project.image}
-                  alt={project.title}
+                  alt={`${project.title} — Web Application Interface Preview Screenshot`}
                   width={600}
                   height={337}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div
@@ -194,7 +195,7 @@ export const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                    aria-label="Live Demo"
+                    aria-label={`Live Demo of ${project.title}`}
                   >
                     <ArrowUpRight className="w-5 h-5" />
                   </a>
@@ -203,7 +204,7 @@ export const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                    aria-label="GitHub Repository"
+                    aria-label={`GitHub Repository of ${project.title}`}
                   >
                     <Github className="w-5 h-5" />
                   </a>
@@ -237,7 +238,7 @@ export const Projects = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 

@@ -20,11 +20,14 @@ export const HeroBackgroundDots = () => {
       animationDuration: `${15 + Math.random() * 20}s`,
       animationDelay: `${Math.random() * 5}s`,
     }));
-    setDots(generatedDots);
+    const handle = requestAnimationFrame(() => {
+      setDots(generatedDots);
+    });
+    return () => cancelAnimationFrame(handle);
   }, []);
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
       {dots.map((dot, i) => (
         <div
           key={i}

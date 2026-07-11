@@ -32,7 +32,7 @@ const experiences: ExperienceItem[] = [
 
 export const Experience = () => {
   return (
-    <section id="experience" className="py-32 relative overflow-hidden">
+    <section id="experience" className="py-32 relative overflow-hidden" aria-label="Experience and Career Journey">
       {/* Background Glow */}
       <div
         className="absolute top-1/2 left-1/4 w-96

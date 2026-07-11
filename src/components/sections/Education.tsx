@@ -38,7 +38,7 @@ const education: EducationItem[] = [
 
 export const Education = () => {
   return (
-    <section id="education" className="py-32 relative overflow-hidden">
+    <section id="education" className="py-32 relative overflow-hidden" aria-label="Education and Academic Journey">
       {/* Background Glow */}
       <div
         className="absolute top-1/2 right-1/4 w-96 h-96

@@ -35,7 +35,7 @@ const highlights: Highlight[] = [
 
 export const About = () => {
   return (
-    <section id="about" className="py-32 relative overflow-hidden">
+    <section id="about" className="py-32 relative overflow-hidden" aria-label="About Emon Howlader">
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Column */}
@@ -59,17 +59,17 @@ export const About = () => {
                 My journey into programming began with a deep curiosity about how websites
                 work behind the scenes. What started as experimenting with simple HTML and
                 CSS gradually evolved into building full-stack web applications using modern
-                JavaScript frameworks. Over the past year, I have dedicated myself to
+                JavaScript frameworks. Over the past year, I have dedicated my portfolio to
                 continuously learning, practicing, and refining my skills as a professional
-                web developer.
+                Full Stack Developer in Bangladesh.
               </p>
 
               <p>
                 I truly enjoy building clean, scalable, and user-focused applications.
-                Whether it’s crafting interactive user interfaces with React and Next.js or
-                designing efficient backend logic with Express.js and TypeScript, I love
-                turning ideas into real, usable digital products. I’m especially passionate
-                about performance optimization, clean architecture, and writing code that is
+                Whether it&apos;s crafting interactive user interfaces as a React Developer and Next.js Developer,
+                or designing efficient backend logic as a Node.js Developer and Express.js Developer with TypeScript,
+                I love turning ideas into real, usable digital products. I&apos;m especially passionate
+                about database design with PostgreSQL and MongoDB, using Prisma ORM, and writing code that is
                 easy to maintain and extend.
               </p>
 
@@ -84,9 +84,9 @@ export const About = () => {
 
             <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
               <p className="text-lg font-medium italic text-foreground">
-                "I believe great software is built at the intersection of logic, creativity,
+                &ldquo;I believe great software is built at the intersection of logic, creativity,
                 and empathy. My goal is to create digital experiences that feel intuitive to
-                users and rewarding for developers to work on."
+                users and rewarding for developers to work on.&rdquo;
               </p>
             </div>
           </div>

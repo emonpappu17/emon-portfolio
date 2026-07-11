@@ -15,27 +15,27 @@ const socialLinks = [
 ];
 
 export const Footer = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = 2026; // Static to avoid hydration mismatch and support server components
 
   return (
-    <footer className="py-12 border-t border-border">
+    <footer className="py-12 border-t border-border" aria-label="Footer Area">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo & Copyright */}
           <div className="text-center md:text-left">
-            <a href="#top" className="text-xl font-bold tracking-tight hover:text-primary transition-colors">
+            <a href="#" className="text-xl font-bold tracking-tight hover:text-primary transition-colors" aria-label="Emon Howlader - Scroll to top">
               EMON<span className="text-primary">.</span>
             </a>
             <p className="text-sm text-muted-foreground mt-2">
               © {currentYear} Emon Howlader. All rights reserved.
             </p>
-            <p className="text-sm text-muted-foreground mt-2">
+            <p className="text-sm text-muted-foreground mt-1">
               UI inspired by PedroTech
             </p>
           </div>
 
           {/* Links */}
-          <nav className="flex flex-wrap justify-center gap-6">
+          <nav className="flex flex-wrap justify-center gap-6" aria-label="Footer Directory Links">
             {footerLinks.map((link) => (
               <a
                 key={link.href}
@@ -54,6 +54,8 @@ export const Footer = () => {
                 key={i}
                 href={social.href}
                 aria-label={social.label}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
               >
                 <social.icon className="w-5 h-5" />

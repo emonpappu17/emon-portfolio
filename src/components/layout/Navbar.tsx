@@ -32,16 +32,20 @@ export const Navbar = () => {
         isScrolled ? "glass-strong py-3" : "bg-transparent py-5"
       } z-50`}
     >
-      <nav className="container mx-auto px-6 flex items-center justify-between">
+      <nav
+        className="container mx-auto px-6 flex items-center justify-between"
+        aria-label="Main Navigation"
+      >
         <a
           href="#"
           className="text-xl font-bold tracking-tight hover:text-primary"
+          aria-label="Emon Howlader - Home Page"
         >
           EMON<span className="text-primary">.</span>
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-1">
+        <div className="hidden md:flex items-center gap-1" role="navigation" aria-label="Desktop Menu">
           <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
             {navLinks.map((link, index) => (
               <a
@@ -57,11 +61,7 @@ export const Navbar = () => {
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <Button
-            onClick={() => {
-              document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
-            }}
-          >
+          <Button href="#contact">
             Contact Me
           </Button>
         </div>
@@ -71,6 +71,8 @@ export const Navbar = () => {
           className="md:hidden p-2 text-foreground cursor-pointer"
           onClick={() => setIsMobileMenuOpen((prev) => !prev)}
           aria-label="Toggle menu"
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-menu"
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -78,8 +80,8 @@ export const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden glass-strong animate-fade-in">
-          <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
+        <div id="mobile-menu" className="md:hidden glass-strong animate-fade-in">
+          <div className="container mx-auto px-6 py-6 flex flex-col gap-4" role="navigation" aria-label="Mobile Menu">
             {navLinks.map((link, index) => (
               <a
                 href={link.href}
@@ -92,10 +94,8 @@ export const Navbar = () => {
             ))}
 
             <Button
-              onClick={() => {
-                setIsMobileMenuOpen(false);
-                document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
-              }}
+              href="#contact"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact Me
             </Button>

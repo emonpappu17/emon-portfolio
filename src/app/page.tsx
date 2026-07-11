@@ -7,20 +7,32 @@ import { Education } from "@/components/sections/Education";
 import { Experience } from "@/components/sections/Experience";
 import { Projects } from "@/components/sections/Projects";
 import { Contact } from "@/components/sections/Contact";
-// import { Testimonials } from "@/components/sections/Testimonials";
+import {
+  JsonLd,
+  getPersonSchema,
+  getWebSiteSchema,
+  getWebPageSchema,
+  getCollectionPageSchema,
+  getBreadcrumbSchema,
+} from "@/components/seo/JsonLd";
 
 export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
+      <JsonLd data={getPersonSchema()} />
+      <JsonLd data={getWebSiteSchema()} />
+      <JsonLd data={getWebPageSchema()} />
+      <JsonLd data={getCollectionPageSchema()} />
+      <JsonLd data={getBreadcrumbSchema()} />
+      
       <Navbar />
-      <main>
+      <main id="main-content" tabIndex={-1} className="outline-none">
         <Hero />
         <About />
         <Skills />
         <Education />
         <Experience />
         <Projects />
-        {/* <Testimonials /> */}
         <Contact />
       </main>
       <Footer />

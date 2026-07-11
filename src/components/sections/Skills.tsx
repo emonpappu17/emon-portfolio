@@ -75,7 +75,7 @@ const skillCategories: SkillCategory[] = [
 
 export const Skills = () => {
   return (
-    <section id="skills" className="py-32 relative overflow-hidden">
+    <section id="skills" className="py-32 relative overflow-hidden" aria-label="Skills and Technologies">
       {/* Background Glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
