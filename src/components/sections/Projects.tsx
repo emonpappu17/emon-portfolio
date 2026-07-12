@@ -16,6 +16,15 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Khelaghor - Sports Field Booking Platform",
+    description:
+      "A centralized platform for booking sports fields, replacing informal phone-based reservations, with role-based User, Host, and Admin dashboards. Features auto-expiring unpaid bookings via cron jobs, SSLCommerz payments, Redis-backed JWT auth with Google OAuth and email OTP, and location-aware discovery with Barikoi Maps.",
+    image: "/projects/khelaghor.png",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "Express.js", "Prisma", "PostgreSQL", "Redis", "SSLCommerz", "Cloudinary"],
+    link: "https://khelaghor-client.vercel.app",
+    github: "https://github.com/emonpappu17/khelaghor-client",
+  },
+  {
     title: "Digital Wallet App",
     description:
       "PayWave is a secure, responsive single-page application that mirrors real-world digital wallet functionality (like bKash/Nagad). It supports three roles (User, Agent, Admin) and integrates with a RESTful backend for authentication and wallet operations",
@@ -23,6 +32,15 @@ const projects: Project[] = [
     tags: ["React", "Typescript", "Redux Toolkit", "RTK Query", "ExpressJS"],
     link: "https://digital-wallet-system-frontend-xi.vercel.app",
     github: "https://github.com/emonpappu17/digital-wallet-system-frontend",
+  },
+  {
+    title: "MediBazaar - Multi-Vendor Medicine E-commerce Platform",
+    description:
+      "A full-featured multi-vendor marketplace for medicines with role-based Admin, Seller, and User dashboards. Supports category-based browsing with search, sort, and pagination, Stripe-powered checkout with automatic invoice generation, and admin tools for managing sellers, categories, payments, and exportable sales reports.",
+    image: "/projects/medibazzar.png",
+    tags: ["React", "Tailwind CSS", "TanStack Query", "React Hook Form", "Firebase Auth", "Stripe", "Express.js", "MongoDB", "JWT"],
+    link: "https://medi-bazaar-client-ass.vercel.app",
+    github: "https://github.com/emonpappu17/mediBazaar-client-ass",
   },
   {
     title: "TripSync - Travel Buddy & Meetup Platform",
@@ -248,9 +266,8 @@ export const Projects = () => {
             <AnimatedBorderButton onClick={() => setShowAll(!showAll)}>
               {showAll ? "Show Less" : "View All Projects"}
               <ArrowUpRight
-                className={`w-5 h-5 transition-transform duration-300 ${
-                  showAll ? "rotate-180" : ""
-                }`}
+                className={`w-5 h-5 transition-transform duration-300 ${showAll ? "rotate-180" : ""
+                  }`}
               />
             </AnimatedBorderButton>
           </div>

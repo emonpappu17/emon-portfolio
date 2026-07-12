@@ -13,7 +13,7 @@ const education: EducationItem[] = [
   {
     degree: "B.A. (Hons) in Political Science",
     institution: "Government Titumir College, Dhaka",
-    period: "2024 – 2028",
+    period: "2024 – Running",
     description:
       "Currently pursuing undergraduate studies with a strong focus on critical thinking, research, and analytical skills.",
     current: true,

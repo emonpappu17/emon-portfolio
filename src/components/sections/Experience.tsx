@@ -11,7 +11,7 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    period: "2025 — Present",
+    period: "2025 — 2026",
     role: "Level 2 learner",
     company: "Programming Hero",
     description:
