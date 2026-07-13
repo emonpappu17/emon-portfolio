@@ -11,7 +11,7 @@ interface EducationItem {
 
 const education: EducationItem[] = [
   {
-    degree: "B.A. (Hons) in Political Science",
+    degree: "B.S.S (Hons) in Political Science",
     institution: "Government Titumir College, Dhaka",
     period: "2024 – Running",
     description:
