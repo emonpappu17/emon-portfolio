@@ -6,6 +6,7 @@ import { Skills } from "@/components/sections/Skills";
 import { Education } from "@/components/sections/Education";
 import { Experience } from "@/components/sections/Experience";
 import { Projects } from "@/components/sections/Projects";
+import { Certificates } from "@/components/sections/Certificates";
 import { Contact } from "@/components/sections/Contact";
 import {
   JsonLd,
@@ -33,6 +34,7 @@ export default function Home() {
         <Education />
         <Experience />
         <Projects />
+        <Certificates />
         <Contact />
       </main>
       <Footer />
